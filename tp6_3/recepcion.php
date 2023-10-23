@@ -10,20 +10,18 @@ if (empty($nombre) && empty($nota)) {
     echo "no ingreso nombre valido";
 } elseif (empty($nota)) {
     echo "no ingreso nota valida";
-} else {
- 
-
+} else { 
     if ($_GET["nota"] >= 0 && $_GET["nota"] <= 10) {
         if ($_GET["nota"] >= 0 && $_GET["nota"] <= 2) {
-            echo "La nota del alumno/a " . $nombre . " es 'muy deficiente'";
+            echo "La nota del alumno/a " . $nombre . " es " . $nota . ": muy deficiente";
         } elseif ($_GET["nota"] >= 3 && $_GET["nota"] <= 5){
-            echo "La nota del alumno/a " . $nombre . " es 'insuficiente'";
+            echo "La nota del alumno/a " . $nombre . " es " . $nota . ": insuficiente";
         } elseif ($_GET["nota"] >= 6 && $_GET["nota"] <= 7) {
-            echo "La nota del alumno/a " . $nombre . " es 'bien'";
+            echo "La nota del alumno/a " . $nombre . " es " . $nota . ": bien";
         } elseif ($_GET["nota"] >= 8 && $_GET["nota"] <= 9) {
-            echo "La nota del alumno/a " . $nombre . " es 'notable'";
+            echo "La nota del alumno/a " . $nombre . " es " . $nota . ": notable";
         } else {
-            echo "La nota del alumno/a " . $nombre . " es 'sobresaliente'";
+            echo "La nota del alumno/a " . $nombre . " es " . $nota . ": sobresaliente";
         }
     }else {
         echo "la nota ingresada es invalida";
